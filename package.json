@@ -1,6 +1,5 @@
 {
   "name": "pika-plugin-minify",
-  "version": "0.1.0",
   "description": "A @pika/pack plugin: Minifies the output in /pkg.",
   "main": "pkg/dist-node/index.js",
   "publishConfig": {
