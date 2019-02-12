@@ -1,7 +1,7 @@
 # pika-plugin-minify
 
 > A [@pika/pack](https://github.com/pikapkg/pack) build plugin.
-> Minifies your index.js files in /pkg/\* using [terser](github.com/terser-js/terser)
+> Minifies your index.js files in /pkg/\* using [terser](https://github.com/terser-js/terser)
 
 ## Install
 
