@@ -41,9 +41,9 @@ export async function build({
             if (err) throw err;
             if (stats.isDirectory()) {
               const indexPath = path.join(path.join(out, dir, "index.js"));
-              const code = readFileSync(indexPath, "utf-8");
               exists(indexPath, async exists => {
                 if (exists) {
+                  const code = readFileSync(indexPath, "utf-8");
                   var result = minify(code, terserOptions);
                   if (result.error) throw result.error;
                   await Promise.all([

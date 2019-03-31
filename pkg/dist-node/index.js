@@ -68,12 +68,12 @@ function _build() {
 
         if (stats.isDirectory()) {
           const indexPath = path.join(path.join(out, dir, "index.js"));
-          const code = fs.readFileSync(indexPath, "utf-8");
           fs.exists(indexPath,
           /*#__PURE__*/
           function () {
             var _ref = _asyncToGenerator(function* (exists) {
               if (exists) {
+                const code = fs.readFileSync(indexPath, "utf-8");
                 var result = terser.minify(code, terserOptions);
                 if (result.error) throw result.error;
                 yield Promise.all([new Promise(resolve => fs.writeFile(path.join(out, dir, terserOptions.sourceMap.filename), result.code, resolve)), new Promise(resolve => fs.writeFile(path.join(out, dir, terserOptions.sourceMap.url), result.map, resolve))]);
